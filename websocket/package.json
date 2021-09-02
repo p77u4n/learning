@@ -1,0 +1,14 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "description": "websocket learning",
+  "main": "index.js",
+  "author": "p77u4n",
+  "license": "MIT",
+  "workspaces": [
+    "chapters/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}

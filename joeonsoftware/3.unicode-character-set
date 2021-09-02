@@ -1,0 +1,56 @@
+Back in the semi-olden days, when unix was being invented and 
+K&R writing The C Programming Language, everything was simple
+.The only characters that mattered were good old unaccented Eng
+  * We had code call ASCII - represent every characters 32 - 127
+  * This could be stored in 7 bits.
+
+Most computers in those days were using 8-bit bytes -> we had a whole bit to spare
+  * You could use for your own devious purposes.
+  * The dim builbs at WordStart used it as an indicator for
+  the last letter in a word.
+  * Code below 32 for control characters, like 7 -> computerbeep, 12 caused the current page paper to go flying out of
+  the printer.
+
+
+Bytes have room for up to eight bigs: "Gosh, we can use the
+codes 128-255 for our own purposes".
+
+The trouble: lots of people had this ideas at the same time
+  * The IBM-PC had OEM character set which provided some 
+  accented characters for European langauges and a bunch
+  of line drawing characters.
+  * Some PCs the character code 130 would display as e', but
+  on computer that was sold in Israel it was the Hebrew 
+  letter Gimel (y). -> when 'résumés' in American would become
+  'rysumys' in Israel.
+  * In many cases, such as Russian, there were lots of diff
+  ideas of what to do with the upper-128 characters.
+
+Eventually this OEM got codified in the ANSI standard 
+  * everybody agreed on what to do below 128
+  * but there were lots of diff ways to handle the char 128 up.
+
+  -> There different systems were called **code pages**
+
+IN ASIAN, even more crazy things were going on, they has
+thousand of chars in their alphabets:
+  * Not fit into 8 bits -> usually solved by the messy 
+  system called DBCS 'double by character set'.
+  * But it incur the difficulity of deciding what character
+  that a specific byte belong to (is this byte representation
+  for a char, or just a part of a two-byte char)
+
+INTERNET COME: we need to have a standard for move strings
+from one computer to another, if not the whole mess came
+tumbling down.
+
+--> UNICODE come in.
+
+  * A brave effort to create a single charset -> included
+  every reasonable writing system on the planet.
+  * misconception: Unicode 16-bit code -> 65,536 possible
+  characters at all -> not correct.
+
+1. Unicode is a different way of thinking about chars.
+
+  * Until now
